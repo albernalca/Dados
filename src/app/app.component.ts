@@ -10,13 +10,13 @@ export class AppComponent {
   titulo = 'Juego Dados';
   //Variables
   dadoIzquierda = 'assets/img/dice1.png'
-  dadoDerecha = 'assets/img/dice4.png'
+  dadoDerecha = 'assets/img/dice3.png'
   numero1: number
   numero2: number
 
   constructor(){
-    this.numero1 = 0
-    this.numero2 = 0
+    this.numero1 = 1
+    this.numero2 = 2
   }
 
 
@@ -26,11 +26,11 @@ export class AppComponent {
     /*Math.round = función regla de redondeo estandar, si # >= 0.5 redondea al número mas cercano hacia arriba 
     si <= 05 se redondea al nuúmero mas cercano hacia abajo */
     this.numero1 = Math.round(Math.random() * 5) + 1
-    //la función Math.random la multiplico por 5 y le sumo 1, con el fin de que me redondee a 1 y o a cero
+    //la función Math.random la multiplico por 5 y le sumo 1, con el fin de redondear a 1 y o a cero
     this.numero2 = Math.round(Math.random() * 5) + 1
-
-    console.log(this.numero1);
-    console.log(this.numero2);
+    //lo utilizo para asignar una imagen a la etiqueta img del html de acuerdo al evento del boton
+    this.dadoIzquierda = 'assets/img/dice' + this.numero1 + '.png'
+    this.dadoDerecha = 'assets/img/dice' + this.numero2 + '.png'
   }
 
 }

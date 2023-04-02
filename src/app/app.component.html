@@ -6,10 +6,20 @@
 <br>
 <div class="container">
   <div class="jumbotron text-center">
+    <br>
     <!--Event binding (click)-->
    <a class="btn btn-primary btn-lg" href="#" role="button" (click)="lanzarDados()">Lanzar Dados</a>
+   <br>
    <!--Property binding [src]-->
    <img [src]="dadoIzquierda" class="img">
    <img [src]="dadoDerecha" class="img">
+   <br>
+   <!--Direcitiva ngIf si los número son iguales mostrar mensaje Ganaste-->
+   <h1 class="display-4">
+    <span *ngIf="numero1 === numero2" class="badge bg-success">Ganaste!!!</span>
+   </h1>
+   <br>
   </div>
+  <br>
+  
 </div>
