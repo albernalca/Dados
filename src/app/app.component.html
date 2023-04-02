@@ -1,13 +1,15 @@
 <div>
   <nav class="navbar navbar-dark bg-primary text-light justify-content-center">
-    <h1 class="display-4">Dados</h1>
+    <h1 class="display-4">{{titulo}}</h1>
   </nav>
 </div>
 <br>
 <div class="container">
   <div class="jumbotron text-center">
-   <a class="btn btn-primary btn-lg" href="#" role="button">Lanzar Dados</a>
-   <img src="assets/img/dice1.png" class="img">
-   <img src="assets/img/dice4.png" class="img">
+    <!--Event binding (click)-->
+   <a class="btn btn-primary btn-lg" href="#" role="button" (click)="lanzarDados()">Lanzar Dados</a>
+   <!--Property binding [src]-->
+   <img [src]="dadoIzquierda" class="img">
+   <img [src]="dadoDerecha" class="img">
   </div>
 </div>
